@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/icons.css" type="text/css">
+    <link rel="stylesheet" href="styles/styles.css" type="text/css">
+  
+    <title></title>
+    <style type="text/css" media="all"></style>
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="screen-board">
+        <span class="ans-type"id="ans"></span>
+        <p id="querry"style="border-bottom: 1px solid #001"></p>
+        <p id="result"></p>
+      </div>
+      <div class="input-board">
+        <div class="button-row">
+          <button class="button control"onclick="appendInput('(')">(</button>
+          <button class="button control"onclick="appendInput(')')">)</button>
+          <button class="button control"onclick="deleteLastDigit()">DEL</button>
+          <button class="button control"onclick="clearCalc()">AC</button>
+        </div>
+        <div class="button-row">
+          <button class="button"onclick="appendInput('1')">1</button>
+          <button class="button"onclick="appendInput('2')">2</button>
+          <button class="button"onclick="appendInput('3')">3</button>
+          <button class="button control"onclick="appendOperator('+')">+</button>
+        </div>
+        <div class="button-row">
+          <button class="button"onclick="appendInput('4')">4</button>
+          <button class="button"onclick="appendInput('5')">5</button>
+          <button class="button"onclick="appendInput('6')">6</button>
+          <button class="button control"onclick="appendOperator('-')">-</button>
+        </div>
+        <div class="button-row">
+          <button class="button"onclick="appendInput('7')">7</button>
+          <button class="button"onclick="appendInput('8')">8</button>
+          <button class="button"onclick="appendInput('9')">9</button>
+          <button class="button control"onclick="appendOperator('*')">&times;</button>
+        </div>
+        <div class="equals">
+          <button class="button"onclick="appendInput('0')">0</button>
+          <button class="button"onclick="appendInput('.')">.</button>
+          <button class="button"id="equals"onclick="calculate()">=</button>
+          <button class="button control"onclick="appendOperator('/')">/</button>
+        </div>
+      </div>
+      <div class="fx-board"id="fx-board">
+        <div class="fx-caret"style="display: block!important;"id="open-fx"onclick="showFx()">
+          <i class="eruda-icon-caret-down"></i>
+        </div>
+        <div class="button-row">
+          <button class="fx-button control"onclick="appendInput('(')">(</button>
+          <button class="fx-button control"onclick="appendInput(')')">)</button>
+          <button class="fx-button control"onclick="deleteLastDigit()">DEL</button>
+          <button class="fx-button control"onclick="clearCalc()">AC</button>
+        </div>
+        <div class="button-row">
+          <button class="fx-button"onclick="">√</button>
+          <button class="fx-button"onclick=""><em>x</em><sup>2</sup></button>
+          <button class="fx-button"onclick=""><em>x</em><sup>3</sup></button>
+          <button class="fx-button  control"onclick="appendOperator('^')">^</button>
+        </div>
+        <div class="button-row">
+          <button class="fx-button"onclick="sine()">sin</button>
+          <button class="fx-button"onclick="cosine()">cos</button>
+          <button class="fx-button"onclick="tangent()">tan</button>
+          <button class="fx-button control"onclick="appendOperator('*(10^')">10<sup>x</sup></button>
+        </div>
+        <div class="button-row">
+          <button class="fx-button"onclick="sineInverse()">sin<sup>-1</sup></button>
+          <button class="fx-button"onclick="cosInverse()">cos<sup>-1</sup></button>
+          <button class="fx-button"onclick="tanInverse()">tan<sup>-1</sup></button>
+          <button class="fx-button control"onclick="appendOperator('%')">%</button>
+        </div>
+        <div class="button-row">
+          <button class="button fx-button"onclick="appendInput(Math.PI.toPrecision(13))">π</button>
+          <button class="button fx-button"onclick="logarithm()">log</button>
+          <button class="button fx-button"onclick="appendInput('*(10^3)')">K</button>
+          <button class="button fx-button control"onclick="appendInput('*(10^6)')">M</button>
+        </div>
+      </div>
+    </div>
+    <script src="script/script.js"></script>
+  </body>
+</html>

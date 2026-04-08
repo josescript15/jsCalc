@@ -1,0 +1,229 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  user-select: none;
+  font-family: Verdana;
+}
+
+.calculator {
+  margin: 10px 10% 10px 10%;
+  border-radius: 12px;
+  width: 80%;
+  height: 95%;
+  font-size: 20px;
+  padding: 0;
+  background-color: #161a3d;
+  position: relative;
+  z-index: 0;
+}
+.screen-board {
+  height: 30%!important;
+  width: 100%;
+  background-color: #161a2d;
+  border-top-right-radius: inherit;
+  border-top-left-radius: inherit;
+  position: relative;
+}
+.ans-type {
+  position: absolute;
+  right: 5px;
+  top: 7px;
+  font-size: 12px!important;
+  padding: 8px 16px;
+  border-radius: 12px;
+  border: none;
+  opacity: 0.4;
+  color: #fff;
+  font-weight: 500;
+}
+#querry, #result {
+  font-family: Verdana;
+  width: 100%;
+  color: #fff;
+  overflow: auto;
+  white-space: nowrap;
+  /* width: 384px; */
+  height: 109.71px;
+}
+#querry {
+  text-align: left;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 24px;
+}
+#result {
+  font-size: 45px;
+  text-align: right;
+  font-weight: bolder;
+  padding: 16px;
+}
+.input-board {
+  height: 485px;
+  padding: 10px;
+  border-top: #fff 1px solid;
+  margin-left: 5px;
+}
+.button {
+  /*width: 20%;
+  height: 100%;*/
+  width: 70px;
+  height: 70px;
+  padding: 24px 24px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.fx-board {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 20px;
+  background-color: #555;
+  border-radius: 12px;
+  z-index: 1;
+  transition: 0.4s;
+}
+.fx-caret i {
+  color: #000;
+}
+.fx-board div {
+  display: none!important;
+}
+
+.fx-board:hover div {
+  display: block;
+}
+.control {
+  background-image: linear-gradient(to right, #609, #426, #248);
+  color: #fff;
+}
+.fx-button {
+  width: 20%;
+  margin: 5px;
+  padding: 4px 8px;
+  height: 49.33px;
+  font-size: 25px;
+  border: none;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+.fx-board .button-row {
+  margin-left: 10px;
+}
+.fx-board .button-row button {
+  font-weight: bold;
+}
+sup {
+  font-size: 10px;
+  font-weight: bold;
+}
+.fx-caret {
+  text-align: center;
+  width: 100%;
+  color: #fff;
+}
+.fx-caret:hover {
+  color: #f1f1f1;
+}
+.fx-board .fx-caret i {
+  transform: rotate(180deg);
+  font-size: 20px;
+  transition: .6s;
+}
+
+#__ {
+  margin-left: 5px;
+}
+.fx-display {
+  height: 70%;
+  background-color: #161a3d;
+  border-top: #fff 1px solid;
+}
+.fx-display .fx-caret i {
+  transform: rotate(0deg);
+  color: #fff;
+}
+.fx-display div {
+  display: block!important;
+  animation: waiting 1.2s;
+}
+@keyframes waiting {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+#equals {
+  background-image: linear-gradient(to right, #001245, #009);
+  color: #fff;
+}
+
+/* ---------------
+media querry for pc 
+---------------- */
+@media screen and (min-width: 500px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
+  .button-row, .equals {
+    margin-left: 5%;
+  }
+  /* #equals {
+    width: 44%;
+  } */
+  .calculator {
+    width: 45%;
+    margin: 25% 0 0 0;
+    height: 50%;
+  }
+  .fx-board .button-row {
+    margin-left: 7%;
+  }
+}
+/* media query for phones */
+@media screen and (max-width: 450px) {
+  .calculator {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+  .button-row, .equals {
+    margin-left: 15px;
+  }
+  .button-row button, .equals button, .fx-button {
+    border-radius: 50%;
+    padding: 6px 12px;
+  }
+  .button-row:first-child, .fx-board .button-row:first-child {
+    margin-top: 30px;
+  }
+  .input-board {
+    padding: 0;
+  }
+  /* for fx buttons*/
+  .fx-board {
+    width: 100%;
+  }
+  .fx-board .button-row {
+    margin: 0;
+    margin-left: 15px;
+    padding: 0!important;
+    height: 15%;
+  }
+  .fx-board .button-row:nth-child(2) {
+    margin-top: 30px;
+  }
+  .fx-button {
+    width: 72.8px;
+    padding: 4px 8px;
+    height: 69.29px;
+  }
+  .fx-display {
+    border-radius: none;
+  }
+}
+    
